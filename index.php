@@ -2,17 +2,16 @@
     $faqs = [
         [
             'question' => 'Come state implementando la recente decisione della Corte di giustizia dell Unione europea (CGUE) relativa al diritto all oblio?',
-            'answer' => 'La recente decisione della Corte di giustizia dellUnione europea ha profonde conseguenze per i motori di ricerca in Europa.
-            
+            'answer' => 'La recente decisione della Corte di giustizia dellUnione europea ha profonde conseguenze per i motori di ricerca in Europa. 
             La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.
 
-            Da quando questa decisione è stata pubblicata il 13 maggio 2014, abbiamo lavorato incessantemente per uniformarci a essa. Si tratta di una procedura complessa perché dobbiamo valutare ogni singola richiesta e effettuare un bilanciamento tra il diritto dellindividuo a controllare i suoi dati personali ed il diritto di tutti di conoscere e distribuire le informazioni.
+            Da quando questa decisione è stata pubblicata il 13 maggio 2014, abbiamo lavorato incessantemente per uniformarci a essa. Si tratta di una procedura complessa perché dobbiamo valutare ogni singola richiesta e effettuare un bilanciamento tra il diritto dellindividuo a controllare i suoi dati personali ed il diritto di tutti di conoscere e distribuire le informazioni. 
             
-            Per presentare una richiesta di rimozione, compila questo modulo web. Riceverai una risposta automatica che conferma la ricezione della tua richiesta. Dopodiché valuteremo il tuo caso (tieni presente che potrebbe occorrere un po di tempo perché abbiamo già ricevuto tante richieste simili). Nel valutare la richiesta, considereremo se i risultati includono informazioni obsolete relative alla tua vita privata. Considereremo inoltre se vi è un interesse pubblico a che le informazioni rimangano nei nostri risultati delle ricerche, ad esempio se riguardano frodi finanziarie, negligenza professionale, condanne penali o la tua condotta pubblica in relazione a un pubblico ufficio (eletto o non eletto). Queste valutazioni sono complesse e, in quanto organizzazione privata, potremmo non essere nella posizione giusta per prendere decisioni in merito al tuo caso. Se non sei daccordo con la nostra valutazione, puoi rivolgerti allAutorità garante per la protezione dei dati personali nel tuo paese.
+            Per presentare una richiesta di rimozione, compila questo modulo web. Riceverai una risposta automatica che conferma la ricezione della tua richiesta. Dopodiché valuteremo il tuo caso (tieni presente che potrebbe occorrere un po di tempo perché abbiamo già ricevuto tante richieste simili). Nel valutare la richiesta, considereremo se i risultati includono informazioni obsolete relative alla tua vita privata. Considereremo inoltre se vi è un interesse pubblico a che le informazioni rimangano nei nostri risultati delle ricerche, ad esempio se riguardano frodi finanziarie, negligenza professionale, condanne penali o la tua condotta pubblica in relazione a un pubblico ufficio (eletto o non eletto). Queste valutazioni sono complesse e, in quanto organizzazione privata, potremmo non essere nella posizione giusta per prendere decisioni in merito al tuo caso. Se non sei daccordo con la nostra valutazione, puoi rivolgerti allAutorità garante per la protezione dei dati personali nel tuo paese. 
             
-            Nei prossimi mesi lavoreremo a stretto contatto con le autorità per la protezione dei dati e con altre autorità per perfezionare il nostro approccio. La decisione della CGUE rappresenta un cambiamento significativo per i motori di ricerca. Siamo preoccupati per le sue conseguenze, ma riteniamo anche che sia importante rispettare la decisione della Corte e ci stiamo adoperando per predisporre una procedura conforme alla legge.
+            Nei prossimi mesi lavoreremo a stretto contatto con le autorità per la protezione dei dati e con altre autorità per perfezionare il nostro approccio. La decisione della CGUE rappresenta un cambiamento significativo per i motori di ricerca. Siamo preoccupati per le sue conseguenze, ma riteniamo anche che sia importante rispettare la decisione della Corte e ci stiamo adoperando per predisporre una procedura conforme alla legge. 
             
-            Quando cerchi un nome, potresti trovare una notifica in cui viene spiegato che i risultati potrebbero essere stati modificati nel rispetto delle leggi europee per la protezione dei dati. Mostriamo questa notifica agli utenti europei quando cercano la maggior parte dei nomi, non soltanto le pagine che sono state soggette a una rimozione.',
+            Quando cerchi un nome, potresti trovare una notifica in cui viene spiegato che i risultati potrebbero essere stati modificati nel rispetto delle leggi europee per la protezione dei dati. Mostriamo questa notifica agli utenti europei quando cercano la maggior parte dei nomi, non soltanto le pagine che sono state soggette a una rimozione.', 
         ],
         [
             'question' => 'Come fa Google a proteggere la mia privacy e a tenere le mie informazioni al sicuro?',
@@ -65,8 +64,16 @@
     <title>Php-Google-Faq</title>
     <style>
         *{
+            box-sizing: border-box;
+            margin: 0;
             font-family: 'Open Sans', sans-serif;
             font-family: 'Roboto', sans-serif;
+        }
+        header{
+            margin-bottom: 4rem;
+        }
+        img{
+            height: 50px;
         }
         main{
             margin: 0 auto;
@@ -74,15 +81,37 @@
         }
         h2{
             font-weight: 400;
+            margin-bottom: 2rem;
         }
         p{
             font-weight: 300;
+            margin-bottom: 2rem;
+
+        }
+        ul{
+            border-bottom: 1px solid lightgray;
+        }
+        ul li{
+            display: inline-block;
+            margin-right: 2rem;
+            padding: 0.2rem;
+        }
+        #faq{
+            color: blue;
+            border-bottom: 3px solid blue;
         }
     </style>
 </head>
 <body>
     <header>
-
+        <img src="https://banner2.cleanpng.com/20180528/prw/kisspng-google-logo-google-search-console-google-adwords-google-5b0bbd3790af74.8119460015274959915926.jpg" alt="">
+        <ul>
+            <li>Introduzione</li>
+            <li>Norme sulla privacy</li>
+            <li>Termini di Servizio</li>
+            <li>Tecnologie</li>
+            <li id="faq">Domande frequenti</li>
+        </ul>
     </header>
     <main>
         <?php foreach($faqs as $faq){ ?>
