@@ -86,6 +86,7 @@
         p{
             font-weight: 300;
             margin-bottom: 2rem;
+            line-height: 2rem;
 
         }
         ul{
